@@ -14,9 +14,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/alapstilus.css" title="normal">
   <link rel="stylesheet" type="text/css" href="css/nagybetus.css" title="nagybetus">
+  <link rel="stylesheet" type="text/css" href="css/nyomtatasistilus.css" title="print">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
+  <script src="jquery.js"></script>
+  <script src="mediaelement-and-player.min.js"></script>
+  <link rel="stylesheet" href="mediaelementplayer.css" />
+
+
+
+  <script>
+    var player = new MediaElementPlayer('#player1');
+  </script>
   <title>Univerzum - Hírek és információk az univerzumról</title>
 </head>
 
@@ -35,14 +45,14 @@
     <div class="container-fluid">
       <div class="row bg-light">
         <div class="col-md-2 my-auto">
-          <figure class="my-auto">
+          <figure>
             <a href="index.html">
-              <img src="bolygoimg2.png" alt="Bolygó" class="d-md-flex mx-auto my-auto w-75 d-inline-block">
+              <img src="bolygoimg2.png" alt="Bolygó" class="headimage">
             </a>
           </figure>
         </div>
         <div class="col-md-10">
-          <h1 class="display-2 text-start py-5 ps-5 my-auto"
+          <h1 id="head" class="display-2 text-start py-5 ps-5 my-auto"
             style="background-image: url('imageedit_3_7870011958.jpg'); background-size: cover; background-position: center; color:white;">
             Hírek az univerzum minden szegletéből!
           </h1>
@@ -54,29 +64,32 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav h5">
-                <a class="nav-item nav-link" href="naprendszer.html">Naprendszer <span
-                    class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link " href="naprendszer.html">Naprendszer</a>
                 <a class="nav-item nav-link active" href="univerzum.html">Univerzum</a>
                 <a class="nav-item nav-link" href="kapcsolat.html">Kapcsolat</a>
               </div>
             </div>
-            <input type="button" value="Növelje a betűméretet 1px-el" class="me-3" onclick="increaseFontSize('b', 1)">
-            <input type="button" value="Csökkentse a betűméretet 1px-el" onclick="increaseFontSize('b', -1)">
+            <div class="fontbutton">
+              <button type="button" onclick="increaseFontSize('b', -1)">Kisebb betű</button>
+              <button type="button" class="me-2" onclick="increaseFontSize('b', 1)">Nagyobb betű</button>
+            </div>
           </nav>
         </div>
       </div>
     </div>
   </header>
 
-  <article class="container-fluid">
+  <article>
     <div class="row">
-      <div class="col-md-12 px-5 my-5">
+      <div class="col-md-12 my-5">
         <section>
-          <p class="par text-start">
-            <iframe class="myfloatright" src="https://www.youtube.com/embed/i93Z7zljQ7I"
+          <div class="myfloatright">
+            <iframe id="" class="video myfloatright" src="https://www.youtube.com/embed/i93Z7zljQ7I"
               title="Az univerzum építőelemei" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen width="560" height="315"></iframe>
+              allowfullscreen width="560" height="315">
+            </iframe>
+          </div>
           <div class="par">
             Univerzumunkban az anyag különböző formákban koncentrálódik, más és más
             objektumokat hozva létre. Így megfigyelhetünk <b><i>csillagokat</i></b>, amelyeket nagyrészt hidrogén és
@@ -88,27 +101,29 @@
             tömörülnek és keringenek
             egymás körül.
             <br><br>
-            <a href="videoleirat.html" target="_blank">A videó leiratához kattints erre a linkre</a>
+            <a href="videoleirat.xhtml" target="_blank">A videó leiratához kattints erre a linkre</a>
             </p>
           </div>
-          </p>
         </section>
       </div>
     </div>
   </article>
 
-  <h1 class="display-3 py-4 ps-5 cim">Legfrissebb hírek az univerzumból</h1>
+  <h1 class="display-3 py-4 cim">Legfrissebb hírek az univerzumból</h1>
+  <h1 class="display-3 pb-5">Hogyan figyelhetjük meg a multiverzum-elmélet ősi fekete lyukait?</h1>
+  <article>
+    <div class="container-fluid">
+      <div class="row">
 
-  <article class="container-fluid py-5 px-5">
-    <div class="row">
-      <div class="col-12 col-md-12 col-lg-12">
-        <section>
-          <a href="multiversum.jpg">
-            <img src="multiversum.jpg" alt="Multiverzum" class="img-fluid ps-5 myfloatright">
-          </a>
-          <h2 class="display-3 pb-5">Hogyan figyelhetjük meg a multiverzum-elmélet ősi fekete lyukait?</h2>
+        <div class="col-md-12 col-lg-6">
+
           <figure>
-        </figure>
+            <a href="multiversum.jpg">
+              <img style="width: 85%;" src="multiversum.jpg" alt="Multiverzum">
+            </a>
+          </figure>
+        </div>
+        <div class="col-md-12 col-lg-6 ">
           <p class="par">
             Az univerzum fizikáját és matematikáját kutató Kavli Intézet (Kavli IPMU) olyan projekteknek ad otthont,
             amelyek több tudományágat fognak át. Az egyik ilyen projekt azokat a <b><i>feketelyukakat </i></b>vizsgálja,
@@ -126,35 +141,53 @@
               Világegyetem anyagának nagy részét alkotja, ősi fekete lyukakból áll.
             </p>
           </aside>
-        </section>
+        </div>
       </div>
     </div>
   </article>
 
-  <article class="container-fluid py-5 px-5">
-    <div class="row">
-      <div class="col-md-6">
-        <figure>
-          <a href="remeny.png">
-            <img src="remeny.png" alt="Megérkezett a Marsra a Remény" class="img-fluid pt-4 px-1">
-          </a>
-        </figure>
-      </div>
-      <div class="col-md-6">
-        <section>
-          <h2 class="display-5 pb-5 cim">Földméretű kőzetbolygót találtak egy tízmilliárd éves csillag körül</h2>
-          <p class="par">
-            <b><i>Három bolygót találtak</i></b> egy nagyjából tízmilliárd éves csillag körül, amelyek közül az egyik
-            kőzetbolygó. A
-            TOI 561 jelű csillag, vagyis az 561. objektum, amelyet a TESS űrtávcsővel fedeztek fel (TOI=TESS Object of
-            Interest), <b><i>galaxisunk vastag korongjában található</i></b>, így a bolygóiról szép kilátás nyílik a
-            Tejútrendszer
-            spiráljára.
-          </p>
-        </section>
+
+
+
+  <h1 class="display-5 pb-5 cim">Földméretű kőzetbolygót találtak egy tízmilliárd éves csillag körül</h1>
+  <article>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-lg-6">
+          <figure>
+            <a href="remeny.png">
+              <img style="width: 95%;" src="remeny.png" alt="Megérkezett a Marsra a Remény">
+            </a>
+          </figure>
+        </div>
+        <div class="col-md-12 col-lg-6">
+          <section>
+            <p class="par">
+              <b><i>Három bolygót találtak</i></b> egy nagyjából tízmilliárd éves csillag körül, amelyek közül az egyik
+              kőzetbolygó. A
+              TOI 561 jelű csillag, vagyis az 561. objektum, amelyet a TESS űrtávcsővel fedeztek fel (TOI=TESS Object of
+              Interest), <b><i>galaxisunk vastag korongjában található</i></b>, így a bolygóiról szép kilátás nyílik a
+              Tejútrendszer
+              spiráljára.
+            </p>
+          </section>
+        </div>
       </div>
     </div>
+
   </article>
+
+  <div class="containerr-fluid">
+    <div class="row">
+      <div class="col-md-3 mx-auto">
+        <video class="mx-auto video" width="320" height="240" controls>
+      <source src="lion-sample.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+      </div>
+    </div>
+    
+  </div>
 
   <footer class="container-fluid bg-dark mt-5 py-5">
     <div class="row">

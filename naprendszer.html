@@ -35,14 +35,14 @@
     <div class="container-fluid">
       <div class="row bg-light">
         <div class="col-md-2 my-auto">
-          <figure class="my-auto">
+          <figure class="headimage">
             <a href="index.html">
-              <img src="bolygoimg2.png" alt="Bolygó" class="d-md-flex mx-auto my-auto w-75 d-inline-block">
+              <img src="bolygoimg2.png" alt="Bolygó" class="headimage">
             </a>
           </figure>
         </div>
         <div class="col-md-10">
-          <h1 class="display-2 text-start py-5 ps-5 my-auto"
+          <h1 id="head" class="display-2 text-start py-5 ps-5 my-auto"
             style="background-image: url('imageedit_3_7870011958.jpg'); background-size: cover; background-position: center; color:white;">
             Hírek az univerzum minden szegletéből!
           </h1>
@@ -54,14 +54,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav h5">
-                <a class="nav-item nav-link active" href="naprendszer.html">Naprendszer <span
-                    class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="naprendszer.html">Naprendszer</a>
                 <a class="nav-item nav-link" href="univerzum.html">Univerzum</a>
                 <a class="nav-item nav-link" href="kapcsolat.html">Kapcsolat</a>
               </div>
             </div>
-            <input type="button" value="Növelje a betűméretet 1px-el" class="me-3" onclick="increaseFontSize('b', 1)">
-            <input type="button" value="Csökkentse a betűméretet 1px-el" onclick="increaseFontSize('b', -1)">
+            <div class="fontbutton">
+              <button type="button" onclick="increaseFontSize('b', -1)">Kisebb betű</button>
+              <button type="button" class="me-2" onclick="increaseFontSize('b', 1)">Nagyobb betű</button>
+            </div>
           </nav>
         </div>
       </div>
@@ -131,17 +132,20 @@
     </div>
   </article>
 
-  <h1 class="display-3 py-5 ps-5 cim">Legfrissebb hírek a naprendszerből</h1>
 
-  <article class="container-fluid py-5 px-5">
-    <div class="row">
-      <div class="col-12 col-md-12 col-lg-12">
-        <section>
+
+  <div class="row">
+    <h1 class="display-3 py-5 cim">Legfrissebb hírek a naprendszerből</h1>
+
+    <div class="col-12 col-md-12 col-lg-12">
+      <article>
+        <section class="container-fluid py-5">
           <h2 class="display-3 pb-5">Félmillió kilométeres csóvájú kentaur-üstököst figyelt meg a Hubble-űrtávcső</h2>
           <div class="">
             <figure>
               <a href="kentaurustokos.jpg">
-                <img src="kentaurustokos.jpg" alt="Üstökös" class="img-fluid px-5 pb-5 float-end myfloatright" style="width: 40%;">
+                <img src="kentaurustokos.jpg" alt="Üstökös" class="img-fluid px-5 pb-5 float-end myfloatright"
+                  style="width: 40%;">
               </a>
             </figure>
           </div>
@@ -162,37 +166,40 @@
             ugyanakkor sok olyan
             kentaur is van, amely nem mutat ilyet. Legutóbb például a C/2014 OG392 kentaur növesztett nagy méretű
             üstököskómát.
-            
+
           </p>
-          
-        </section>
-      </div>
 
-    </div>
-  </article>
-
-  <article class="container-fluid py-5 px-5">
-    <div class="row">
-      <div class="col-md-6">
-        <figure>
-          <a href="remeny.png">
-            <img src="remeny.png" alt="Megérkezett a Marsra a Remény" class="img-fluid pt-4 px-1 my-auto">
-          </a>
-        </figure>
-      </div>
-      <div class="col-md-6">
-        <section>
-          <h2 class="display-5 pb-5 my-auto cim">Megérkezett a Marsra a Remény</h2>
-          <p class="par"><b><i>Sikeresen pályára állt</i></b> az Egyesült Arab Emírségek Hope (=Remény) szondája a Mars
-            körül. Február
-            9-én, kedden magyar idő szerint 17 órára állította le a rakétáit, amelyek segítségével 27 perc alatt 33
-            km/s-os sebességről 5 km/s-os sebességre lassított. A Mars körüli sikeres pályára állás <b><i>hatalmas
-                mérföldkő a
-                fiatal űrügynökségnek.</i></b></p>
         </section>
-      </div>
+      </article>
     </div>
-  </article>
+
+  </div>
+
+  <div class="container-fluid py-5">
+    <article>
+      <div class="row">
+        <div class="col-lg-6">
+          <figure class="remeny">
+            <a href="remeny.png">
+              <img id="remeny" src="remeny.png" alt="Megérkezett a Marsra a Remény" class="my-auto">
+            </a>
+          </figure>
+        </div>
+        <div class="col-lg-6">
+          <section>
+            <h2 class="display-5 pb-5 cim">Megérkezett a Marsra a Remény</h2>
+            <p class="par"><b><i>Sikeresen pályára állt</i></b> az Egyesült Arab Emírségek Hope (=Remény) szondája a
+              Mars
+              körül. Február
+              9-én, kedden magyar idő szerint 17 órára állította le a rakétáit, amelyek segítségével 27 perc alatt 33
+              km/s-os sebességről 5 km/s-os sebességre lassított. A Mars körüli sikeres pályára állás <b><i>hatalmas
+                  mérföldkő a
+                  fiatal űrügynökségnek.</i></b></p>
+          </section>
+        </div>
+      </div>
+    </article>
+  </div>
 
   <footer class="container-fluid bg-dark mt-5 py-5">
     <div class="row">

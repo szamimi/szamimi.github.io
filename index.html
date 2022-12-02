@@ -35,14 +35,14 @@
     <div class="container-fluid">
       <div class="row bg-light">
         <div class="col-md-2 my-auto">
-          <figure class="my-auto">
+          <figure class="headimage">
             <a href="index.html">
-              <img src="bolygoimg2.png" alt="Bolygó" class="d-md-flex mx-auto my-auto w-75 d-inline-block">
+              <img src="bolygoimg2.png" alt="Bolygó" class="headimage">
             </a>
           </figure>
         </div>
         <div class="col-md-10">
-          <h1 class="display-2 text-start py-5 ps-5 my-auto"
+          <h1 id="head" class="display-2 text-start py-5 ps-5 my-auto"
             style="background-image: url('imageedit_3_7870011958.jpg'); background-size: cover; background-position: center; color:white;">
             Hírek az univerzum minden szegletéből!
           </h1>
@@ -54,58 +54,61 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav h5">
-                <a class="nav-item nav-link" href="naprendszer.html">Naprendszer <span
-                    class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="naprendszer.html">Naprendszer</a>
                 <a class="nav-item nav-link" href="univerzum.html">Univerzum</a>
                 <a class="nav-item nav-link" href="kapcsolat.html">Kapcsolat</a>
               </div>
             </div>
-            <input type="button" value="Növelje a betűméretet 1px-el" class="me-3" onclick="increaseFontSize('b', 1)">
-            <input type="button" value="Csökkentse a betűméretet 1px-el" onclick="increaseFontSize('b', -1)">
+            <div class="fontbutton">
+              <button type="button" onclick="increaseFontSize('b', -1)">Kisebb betű</button>
+              <button type="button" class="me-2" onclick="increaseFontSize('b', 1)">Nagyobb betű</button>
+            </div>
           </nav>
         </div>
       </div>
     </div>
   </header>
 
-  <h1 class="display-3 py-4 ps-5 cim">Aktuális hírek</h1>
-  <article>
-    <div class="container-fluid my-5">
-      <div class="row pb-5">
-        <div class="col-12 col-md-12 col-lg-6">
-          <section>
-            <h2 class="display-3 ps-5 pb-5">Egyre jobban megdől a Szaturnusz tengelye</h2>
-            <p class="par ps-5">
-              Korábbi megfigyelések igazolták, hogy a <a href="https://hu.wikipedia.org/wiki/Titan_(hold)"
-                target="_blank"><u>Titan</u></a> és a <a href="https://hu.wikipedia.org/wiki/Szaturnusz"
-                target="_blank"><u>Szaturnusz</u></a> más holdjai <b><i>fokozatosan távolodnak a
-                  gázóriástól</i></b>, sokkal gyorsabban, mint korábban gondolták. A kutatók beépítették a számításokba
-              a
-              megnövekedett migrációs rátát, és a kapott eredmények szerint a folyamat hatással van a Szaturnusz
-              forgástengelyének dőlésére: <b><i>ahogy a holdak távolodnak tőle, úgy dől meg egyre jobban és jobban a
-                  bolygó
-                  tengelye.</i></b>
-            </p>
-          </section>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6">
-          <figure class="py-auto">
-            <a href="szaturnusz.jpg">
-              <img src="szaturnusz.jpg" alt="Szaturnusz" class="img-fluid d-md-block float-end me-5 pe-3">
-            </a>
-          </figure>
-        </div>
+  <h1 id="aktualis" class="display-3 py-4 ps-8 cim">Aktuális hírek</h1>
+  <article id="szaturnusz">
+    <div class="row pb-5">
+      <h2 class="display-3 pb-5">Egyre jobban megdől a Szaturnusz tengelye</h2>
+      <div class="col-md-12 col-lg-6">
+        <section>
+          <p id="szaturnusz" class="par">
+            Korábbi megfigyelések igazolták, hogy a <a href="https://hu.wikipedia.org/wiki/Titan_(hold)"
+              target="_blank"><u>Titan</u></a> és a <a href="https://hu.wikipedia.org/wiki/Szaturnusz"
+              target="_blank"><u>Szaturnusz</u></a> más holdjai <b><i>fokozatosan távolodnak a
+                gázóriástól</i></b>, sokkal gyorsabban, mint korábban gondolták. A kutatók beépítették a számításokba
+            a
+            megnövekedett migrációs rátát, és a kapott eredmények szerint a folyamat hatással van a Szaturnusz
+            forgástengelyének dőlésére: <b><i>ahogy a holdak távolodnak tőle, úgy dől meg egyre jobban és jobban a
+                bolygó
+                tengelye.</i></b>
+          </p>
+        </section>
+      </div>
+      <div id="szaturnusz" class="col-sm-12 col-md-12 col-lg-6">
+        <figure>
+          <a href="szaturnusz.jpg">
+            <img id="szaturnusz" src="szaturnusz.jpg" alt="Szaturnusz">
+          </a>
+        </figure>
       </div>
     </div>
   </article>
 
-  <article class="container-fluid my-5">
-    <div class="row pb-5">
-      <div class="col-md-12">
-        <section>
-          <h2 class="display-3 ps-5 pb-5">A Tejútrendszer óceánokkal és kontinensekkel tagolt bolygókkal lehet tele</h2>
-          <p class="par ps-5">
-            <img src="bolygoocean.png" alt="Óceán" class="img-fluid myfloatleft pe-5 w-sm-50 w-md-25">
+  <article>
+    <h2 class="display-3 pb-5">A Tejútrendszer óceánokkal és kontinensekkel tagolt bolygókkal lehet tele</h2>
+    <div class="container-fluid my-5">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <section>
+            <img src="bolygoocean.png" alt="Óceán" class="myfloatleft img-fluid pe-5 w-sm-50 w-md-25">
+          </section>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <p class="par">
             A Földön kívüli élet kutatása a csillagászat kiemelt figyelemben részesülő területe.
             Elsősorban az elmúlt évtizedben működött Kepler űrtávcsőnek köszönhetően tudjuk már, hogy a galaxisunkban
             több bolygó van,
@@ -116,8 +119,12 @@
             jelenléte az égitesten. Tavaly már beszámoltunk egy, az exoóceánok nagy gyakoriságára rávilágító tudományos
             eredményről.
             Most egy másik kutatócsoport, egészen más megfontolások révén jutott ahhoz nagyon hasonló következtetésre.
-            <br><br>
-            <a href="https://www.ku.dk/english/" target="_blank"><u>A Koppenhágai
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <p class="par">
+            <a href="https://www.ku.dk/english/" target="_blank">
+              <u>A Koppenhágai
                 Egyetem</u></a> GLOBE Intézetének munkatársai kimutatták, hogy <b><i>a víz a legtöbb bolygóban már
                 keletkezésétől fogva
                 jelen lehet </b></i>. A tanulmány eredményei szerint így volt ez a Földön, a Marson és a Vénuszon is.
@@ -130,17 +137,19 @@
             Johansen, a koppenhágai Csillag- és Bolygókeletkezési Központ kutatója, a tudományos eredményeket közlő
             szakcikk vezető szerzője.
           </p>
-        </section>
+        </div>
       </div>
     </div>
   </article>
 
   <article class="container-fluid my-5">
+    <h2 class="display-3 ps-5 pb-5">Új kémiát és gázciklust fedezett fel az európai-orosz marskísérlet</h2>
+
     <div class="row pb-5">
-      <div class="col-12 col-md-12">
-        <h2 class="display-3 ps-5 pb-5">Új kémiát és gázciklust fedezett fel az európai-orosz marskísérlet</h2>
-        <a href="gazciklus.png"></a><img src="gazciklus.png" alt="Gáz-ciklus"
-          class="img-fluid ps-5 myfloatright me-5 pe-3 pb-5"></a>
+      <div class="text-center">
+        <a href="gazciklus.png"></a><img id="gazciklus" src="gazciklus.png" alt="Gáz-ciklus" class="pb-5"></a>
+      </div>
+      <div>
         <p class="par ps-5 float-right"><b><i>Hidrogén-klorid gázt fedezett fel</b></i> a Mars légkörében az
           ESA-Roszkozmosz ExoMars Trace Gas
           Orbiter

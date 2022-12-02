@@ -1,0 +1,17 @@
+@media print {
+
+body {
+	font-family:sans-serif;
+}
+
+header nav, footer {
+	width:100%;
+	padding:0;
+}
+
+video {
+    display: none;
+}
+
+nav {display:none}
+}

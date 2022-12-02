@@ -1,14 +1,89 @@
+body {
+  color: black;
+}
+
 .par {
   font-size: 1.5em;
-  font-family:sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+  font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
 }
+
 .cim {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.myfloatleft {
-  float: left;
+
+
+article {
+  margin: 0 80px;
 }
 
-.myfloatright {
-  float: right;
+.fontbutton {
+  display: block;
+  font-size: 1em;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.remeny {
+  margin: 0 auto;
+}
+
+img#remeny {
+  width: 99%;
+  margin: 0 auto;
+}
+
+div#szaturnusz {
+  margin: 0 auto;
+}
+
+img#szaturnusz {
+  width: 70%;
+  margin: 0 auto;
+}
+h1 {
+  margin: 0 80px;
+}
+
+h1#head {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.headimage {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 770px) {
+  .headimage {
+    display: none;
+  }
+
+}
+@media only screen and (max-width: 500px) {
+  .video {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 913px) {
+  .myfloatleft {
+    float: left;
+  }
+
+  .myfloatright {
+    float: right;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+article {
+  margin: 0 40px;
+}
+}
+
+@media only screen and (max-width: 350px) {
+article {
+  margin: 0 20px;
+}
 }

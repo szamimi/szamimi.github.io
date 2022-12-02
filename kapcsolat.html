@@ -35,14 +35,14 @@
     <div class="container-fluid">
       <div class="row bg-light">
         <div class="col-md-2 my-auto">
-          <figure class="my-auto">
+          <figure>
             <a href="index.html">
-              <img src="bolygoimg2.png" alt="Bolygó" class="d-md-flex mx-auto my-auto w-75 d-inline-block">
+              <img src="bolygoimg2.png" alt="Bolygó" class="headimage">
             </a>
           </figure>
         </div>
         <div class="col-md-10">
-          <h1 class="display-2 text-start py-5 ps-5 my-auto"
+          <h1 id="head" class="display-2 text-start py-5 ps-5 my-auto"
             style="background-image: url('imageedit_3_7870011958.jpg'); background-size: cover; background-position: center; color:white;">
             Hírek az univerzum minden szegletéből!
           </h1>
@@ -54,14 +54,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav h5">
-                <a class="nav-item nav-link" href="naprendszer.html">Naprendszer <span
-                    class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link " href="naprendszer.html">Naprendszer</a>
                 <a class="nav-item nav-link" href="univerzum.html">Univerzum</a>
                 <a class="nav-item nav-link active" href="kapcsolat.html">Kapcsolat</a>
               </div>
             </div>
-            <input type="button" value="Növelje a betűméretet 1px-el" class="me-3" onclick="increaseFontSize('b', 1)">
-            <input type="button" value="Csökkentse a betűméretet 1px-el" onclick="increaseFontSize('b', -1)">
+            <div class="fontbutton">
+              <button type="button" onclick="increaseFontSize('b', -1)">Kisebb betű</button>
+              <button type="button" class="me-2" onclick="increaseFontSize('b', 1)">Nagyobb betű</button>
+            </div>
           </nav>
         </div>
       </div>
@@ -72,56 +73,60 @@
     <h1 class="display-5 py-4 text-center cim">Iratkozz fel hírlevelünkre!</h1>
   </section>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <form class="mx-5 px-5 mw-50">
-          <div class="form-group pt-3">
-            <label for="nevinput1">Vezetéknév</label>
-            <input type="email" class="form-control" id="nevinput1" placeholder="Gipsz" maxlength="20">
-          </div>
-          <div class="form-group pt-3">
-            <label for="nevinput2">Keresztnév</label>
-            <input type="email" class="form-control" id="nevinput2" placeholder="Jakab" maxlength="15">
-          </div>
-          <div class="form-group pt-3">
-            <label for="emailinput">Email-cím</label>
-            <input type="email" class="form-control" id="emailinput" placeholder="gipszjakab@example.com" maxlength="20">
-          </div>
+  <article>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <form class="mw-50" action=”mailto:mihaly.szarvas@gmail.com” method="POST" enctype="text/plain" name="EmailForm">
+            <div class="form-group pt-3">
+              <label for="nevinput1">Vezetéknév</label>
+              <input type="email" class="form-control" id="nevinput1" placeholder="Gipsz" maxlength="20">
+            </div>
+            <div class="form-group pt-3">
+              <label for="nevinput2">Keresztnév</label>
+              <input type="email" class="form-control" id="nevinput2" placeholder="Jakab" maxlength="15">
+            </div>
+            <div class="form-group pt-3">
+              <label for="emailinput">Email-cím</label>
+              <input type="email" class="form-control" id="emailinput" placeholder="gipszjakab@example.com"
+                maxlength="20">
+            </div>
 
-          <label class="pt-3">A téma, ami leginkább érdekel: </label>
-          <div class="form-check form-check">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Az univerzum születése</label>
-          </div>
-          <div class="form-check form-check">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Feketelyukak, féregjáratok</label>
-          </div>
-          <div class="form-check form-check">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-            <label class="form-check-label" for="inlineRadio3">Földön kívüli élet</label>
-          </div>
+            <label class="pt-3">A téma, ami leginkább érdekel: </label>
+            <div class="form-check form-check">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">Az univerzum születése</label>
+            </div>
+            <div class="form-check form-check">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">Feketelyukak, féregjáratok</label>
+            </div>
+            <div class="form-check form-check">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+              <label class="form-check-label" for="inlineRadio3">Földön kívüli élet</label>
+            </div>
 
-          <div class="form-group pt-3">
-            <label for="tematextarea">Ha új, az Univerzumunkkal kapcsolatos érdekes témát ajánlanál figyelmünkbe, itt
-              írhatod le részletesebben</label>
-            <textarea class="form-control" id="tematextarea" rows="3"></textarea>
-          </div>
+            <div class="form-group pt-3">
+              <label for="tematextarea">Ha új, az Univerzumunkkal kapcsolatos érdekes témát ajánlanál figyelmünkbe, itt
+                írhatod le részletesebben</label>
+              <textarea class="form-control" id="tematextarea" rows="3"></textarea>
+            </div>
 
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1">Elfogadom az adatkezelési nyilatkozatot</label>
-          </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck1">
+              <label class="custom-control-label" for="customCheck1">Elfogadom az adatkezelési nyilatkozatot</label>
+            </div>
 
-          <button type="submit" class="btn btn-primary mt-3">Feliratkozás</button>
-          <button type="reset" class="btn btn-primary mt-3">Reset</button>
-        </form>
+            <button type="submit" class="btn btn-primary mt-3">Feliratkozás</button>
+            <button type="reset" class="btn btn-primary mt-3">Reset</button>
+          </form>
+        </div>
+        <div class="col-md-2"></div>
       </div>
-      <div class="col-md-2"></div>
     </div>
-  </div>
+  </article>
+
 
 
   <footer class="container-fluid bg-dark mt-5 py-5">
